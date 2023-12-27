@@ -30,7 +30,8 @@ spec:
   selector:
     app: petstore
   ports:
+    - name: http
     - protocol: TCP
-      port: 8080
+      port: 80
       targetPort: 8080
-  type: NodePort # Change this according to your environment (NodePort, LoadBalancer, etc.)
+  type: LoadBalance # Change this according to your environment (NodePort, LoadBalancer, etc.)
