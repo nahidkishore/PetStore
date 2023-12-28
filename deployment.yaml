@@ -24,11 +24,11 @@ kind: Service
 metadata:
   name: petstore
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: petstore
   ports:
   - name: http
     protocol: TCP
-    port: 80
+    port: 8080
     targetPort: 8080
